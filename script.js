@@ -54,5 +54,6 @@ $(function () {
         $(".Fetched #bio").text(FetchedDetails.bio); 
         resetmessages();
         $(".Fetched").fadeIn(); 
+        $(this).after('<button type="button" class="btn btn-primary" onClick="location.reload();">Again</button>')
     });
 });
