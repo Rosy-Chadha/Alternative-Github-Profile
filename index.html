@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <title>Alternate Github Profile</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark shadow mb-4">
+            <div class="container-fluid justify-content-center">
+              <span class="navbar-brand mb-0 h1">Alternate Github Profile</span>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <form onsubmit="return false;">
+                        <div class="mb-3">
+                          <label for="githubusername" class="form-label">Github Username</label>
+                          <input type="text" class="form-control" id="github-username" aria-describedby="emailHelp">
+                          <div id="githubusernamehelp" class="form-text">We'll fetch your details from this username.</div>
+                        </div>
+                        <button type="button" id="check" class="btn btn-success" disabled="disabled">Check</button>
+                        <button type="button" id="fetch" class="btn btn-success" disabled="disabled">Fetch</button>
+                    </form>
+                </div>
+                <div class="col-8">
+                    <div class="Nousername">
+                        <p>Please enter your username and click on check</p>
+                    </div>
+                    <div class="Wrongusername">
+                        <p>Oops! Github doesn't have your account</p>
+                    </div>
+                    <div class="Incompleteusername">
+                        <p>Unable to fetch your profile. Complete your profile with these.</p>
+                        <ui>
+                            <li>login</li>
+                            <li>avatar_url</li>
+                            <li>name</li>
+                            <li>company</li>
+                            <li>blog</li>
+                            <li>location</li>
+                            <li>bio</li>
+                            <li>twitter_username</li>
+                        </ui>
+                    </div>  
+                    <div class="Everythingright">
+                        <p>Everything is right</p>
+                    </div> 
+                    <div class="Fetched e-flex">
+                        <div class="avatar">
+                        <img src="https://placekitten.com/200/300" class="img-thumbnail" alt="username" id="avatar_url" />
+                    </div>
+                    <div class="flex_grow_1 ps-3">
+                        <p>Hello <span id="name"></span>, nice that you have been fetched. Here is your details.</p>
+                        <div class="list-group mt-3">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "login">Loading Login...</h5>
+                                </div>
+                                <p class="mb-1">Username</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "name">Loading Name...</h5>
+                                </div>
+                                <p class="mb-1">Full Name</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "company">Loading Company...</h5>
+                                </div>
+                                <p class="mb-1">Company</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "blog">Loading blog...</h5>
+                                </div>
+                                <p class="mb-1">Website Link</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "location">Loading Location...</h5>
+                                </div>
+                                <p class="mb-1">Where in the World</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "hireable">Loading Hireable...</h5>
+                                </div>
+                                <p class="mb-1">Available to jump out..</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "twitter_username">Loading Twitter...</h5>
+                                </div>
+                                <p class="mb-1">Tweetty Bird</p>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="e-flex width=100 justify-content-between">
+                                    <h5 class ="mb-1" id = "bio">Loading Bio...</h5>
+                                </div>
+                                <p class="mb-1">About Me</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>                 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
